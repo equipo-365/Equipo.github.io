@@ -9,7 +9,10 @@
     <p>Welcome to <%= title %></p>
     <ul>
       <% results.forEach(function(PERROS){ %>
-        <li><%= PERRO.model %></li>
+        <li><strong>Nombre:</strong> <%= PERROS.Nombre %>, 
+            <strong>Raza:</strong> <%= PERROS.Raza %>, 
+            <strong>Edad:</strong> <%= PERROS.Edad %>, 
+            <strong>Municipio:</strong> <%= PERROS.Municipio %></li>
       <% }); %>
     </ul>
     <div class="container">
@@ -18,8 +21,8 @@
             <div class="col-md-4 col-xs-12">
                 <div class="perros">
                     <div class="perros-body">
-                        <h5 class="perros-title">Perros</h5>
-                        <p class="perros-texto">Hola</p>
+                        <h5 class="perros-title"><%= PERROS.Nombre %></h5>
+                        <p class="perros-texto"><%= PERROS.Caracteristicas %></p>
                         <a href="#" class="btn btn-primary">Go</a>
                     </div>
                 </div>
