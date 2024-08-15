@@ -23,4 +23,4 @@ VALUES
 ('Daisy', 'Golden Retriever', 'Hembra', 'Joven', 'Grande', 'Amigable y paciente', 'Santa Catarina'),
 ('Molly', 'Rottweiler', 'Hembra', 'Adulta', 'Grande', 'Leal y protectora', 'Garcia'); */
 
-SELECT * FROM PERROS
+SELECT * FROM PERROS;
