@@ -38,4 +38,16 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+const db = require('./db'); // Asegúrate de que este módulo tiene las funciones correctas para acceder a la base de datos
+
+app.get('/adoptar', async (req, res) => {
+    try {
+        const pets = await db.findAll(); // Suponiendo que esta función devuelve todos los perros
+        res.render('adoptar', { pet: pets[0] }); // Enviar el primer perro a la plantilla
+    } catch (error) {
+        res.status(500).send('Error al recuperar datos de la base de datos');
+    }
+});
+
+
 module.exports = app;

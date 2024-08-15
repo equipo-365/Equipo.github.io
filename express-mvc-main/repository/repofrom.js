@@ -12,7 +12,7 @@ module.exports = Object.freeze({
         try {
 
             conn = await pool.getConnection();
-            const rows = await conn.query("SELECT * from PERROS where id = ?", [id]);
+            const rows = await conn.query("SELECT * from SolicitudAdopcion where id = ?", [id]);
             // rows: [ {val: 1}, meta: ... ]
             if (rows.length > 0){
                 return rows[0];
@@ -26,7 +26,7 @@ module.exports = Object.freeze({
         try {
 
             conn = await pool.getConnection();
-            const rows = await conn.query("SELECT * from PERROS");
+            const rows = await conn.query("SELECT * from SolicitudAdopcion");
             // rows: [ {val: 1}, meta: ... ]
             return rows;
         } finally {
